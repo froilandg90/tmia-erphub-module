@@ -27,4 +27,15 @@ jobs:
 #    - run: npm lint
     - name: Building project ${{ matrix.node-version }}
       run: npm run build --if-present
-#    - run: npm test:integration
+  test:
+    needs: build
+    name: TEST
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo 'TEST'
+  publish:
+    needs: test
+    name: PUBLISH
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'PUBLISH'
