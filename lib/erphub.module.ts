@@ -1,6 +1,7 @@
 import { DynamicModule, Module } from '@nestjs/common';
-import { ErpHubModuleAsyncOptions, ErpHubModuleOptions} from './interfaces';
-import { ErpHubCoreModule } from "./erphub-core.module";
+import { ErpHubModuleAsyncOptions, ErpHubModuleOptions } from './interfaces';
+import { ErpHubCoreModule } from './erphub-core.module';
+
 @Module({})
 export class ErpHubModule {
   static forRoot(options: ErpHubModuleOptions): DynamicModule {
