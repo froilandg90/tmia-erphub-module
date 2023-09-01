@@ -61,5 +61,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/nestjs/config"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }

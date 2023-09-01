@@ -1,9 +1,8 @@
 name: Publish
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    tags:
+      - v*
 jobs:
   publish:
     name: PUBLISH
@@ -25,3 +24,5 @@ jobs:
       - name: Publishing package
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
