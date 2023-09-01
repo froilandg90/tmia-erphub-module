@@ -1,6 +1,6 @@
 {
   "name": "@tmia/erphub",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "Nest module to interact with the ERP Hub component",
   "author": "Froilan Dominguez",
   "license": "MIT",

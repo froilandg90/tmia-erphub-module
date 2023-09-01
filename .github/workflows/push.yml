@@ -22,7 +22,6 @@ jobs:
       - name: Installing packages
         run: npm ci
       - name: Publishing package
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
