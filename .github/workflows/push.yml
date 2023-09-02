@@ -1,0 +1,27 @@
+name: Publish
+on:
+  push:
+    tags:
+      - v*
+jobs:
+  publish:
+    name: PUBLISH
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Getting Code
+        uses: actions/checkout@v3
+      - name: Getting Ready Node
+        uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+          node-version: '16.x'
+          registry-url: 'https://npm.pkg.github.com'
+      - name: Installing packages
+        run: npm ci
+      - name: Publishing package
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

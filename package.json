@@ -1,5 +1,5 @@
 {
-  "name": "@tmia/erphub",
+  "name": "@froilandg90/erphub",
   "version": "1.0.0",
   "description": "Nest module to interact with the ERP Hub component",
   "author": "Froilan Dominguez",
@@ -61,5 +61,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/nestjs/config"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
