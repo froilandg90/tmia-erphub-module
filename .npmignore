@@ -1,0 +1,8 @@
+.idea/
+.github/
+lib/
+node_modules/
+.gitignore
+.npmignore
+.prettierrc
+package-lock.json
